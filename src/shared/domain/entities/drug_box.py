@@ -4,7 +4,7 @@ from src.shared.domain.enums.ingestion_type_enum import INGESTION_TYPE
 from src.shared.helpers.errors.domain_errors import EntityError
 
 
-class DrugBox(abc):
+class DrugBox(abc.ABC):
     drugbox_id: int
     ingestion_type: INGESTION_TYPE
     volume: float
