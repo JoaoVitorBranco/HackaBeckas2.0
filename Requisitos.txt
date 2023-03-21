@@ -1,0 +1,23 @@
+“Quero um sistema de farmácia que armazene as caixas de remédios.
+Elas devem conter um volume, indicar a qual remédio ela se refere,
+o tipo de ingestão do remédio, o preço do produto, nome e descrição
+do remédio”
+
+DrugBox
+    drugbox_id: int
+    ingestion_type: ENUM
+    volume: float
+    num_drug: int
+    drug_type: DrugTypeEnum
+
+Drugs
+    name: str
+    description: str
+    price: float
+
+
+
+
+
+
+
