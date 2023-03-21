@@ -5,12 +5,12 @@ do remédio”
 
 DrugBox
     drugbox_id: int
-    ingestion_type: ENUM
+    ingestion_type: INGESTION_TYPE
     volume: float
     num_drug: int
-    drug_type: DrugTypeEnum
+    drug: Drug
 
-Drugs
+Drug
     name: str
     description: str
     price: float
