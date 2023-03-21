@@ -20,5 +20,5 @@ class Test_Drug():
             drug = Drug(name="drug", description=None, price=1.0)
             
     def test_drug_invalid_price(self):
-        with pytest.raises(EntityError):
+        with pytest.raises(EntityError): 
             drug = Drug(name="drug", description="description", price="1.0")
