@@ -25,6 +25,12 @@ class DrugBoxRepositoryMock(IDrugBoxRepository):
     def create_drugbox(self, drugbox: DrugBox) -> DrugBox:
         self.drugboxes.append(drugbox)
         return drugbox
+    
+    def get_drugbox(self, drugbox_id: int) -> DrugBox:
+        for drugbox in self.drugboxes:
+            if drugbox.drugbox_id == drugbox_id:
+                return drugbox
+        return None
         
         
         

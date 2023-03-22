@@ -16,3 +16,18 @@ class Test_DrugBoxRepositoryMock:
         
         assert length_after == length_before + 1
         assert drugbox_response == drugbox 
+        
+    def test_get_drugbox(self):
+        repo = DrugBoxRepositoryMock()
+        
+        drugbox = repo.get_drugbox(drugbox_id=repo.drugboxes[0].drugbox_id) 
+        
+        assert drugbox == repo.drugboxes[0]
+        
+    def test_get_drugbox_not_found(self):
+        repo = DrugBoxRepositoryMock()
+        
+        drugbox = repo.get_drugbox(drugbox_id=-1) 
+        
+        assert drugbox == None
+    
