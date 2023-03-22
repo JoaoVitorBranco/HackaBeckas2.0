@@ -15,4 +15,4 @@ class Test_DrugBoxRepositoryMock:
         length_after = len(repo.drugboxes)
         
         assert length_after == length_before + 1
-        assert drugbox_response == drugbox
+        assert drugbox_response == drugbox 
