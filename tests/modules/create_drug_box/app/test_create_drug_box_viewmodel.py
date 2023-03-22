@@ -16,7 +16,7 @@ class Test_CreateDrugBoxViewmodel:
             'ingestion_type':'GAS',
             'volume':200.0,
             'num_drug':5,
-            'price':7.5,
+            'total_price':7.5,
             'drug':{
                 'name':'Viagrinha',
                 'description':'O exercito curte e curto',

@@ -32,7 +32,7 @@ class DrugBoxViewmodel:
         self.ingestion_type = drugbox.ingestion_type
         self.volume = drugbox.volume
         self.num_drug = drugbox.num_drug
-        self.price = drugbox.num_drug * drugbox.drug.price
+        self.total_price = drugbox.num_drug * drugbox.drug.price
         self.drug = DrugViewmodel(drugbox.drug)
 
     def to_dict(self):
@@ -41,7 +41,7 @@ class DrugBoxViewmodel:
             "ingestion_type": self.ingestion_type.value,
             "volume": self.volume,
             "num_drug": self.num_drug,
-            "price": self.price,
+            "total_price": self.total_price,
             "drug": self.drug.to_dict()
         }
 
