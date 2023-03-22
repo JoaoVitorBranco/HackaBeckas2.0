@@ -7,7 +7,7 @@ from src.shared.helpers.errors.domain_errors import EntityError
 class DrugBox(abc.ABC):
     drugbox_id: int
     ingestion_type: INGESTION_TYPE
-    volume: float
+    volume: float #ml
     num_drug: int
     drug: Drug
     
@@ -32,3 +32,5 @@ class DrugBox(abc.ABC):
             raise EntityError("drug")
         self.drug = drug 
     
+    def __eq__(self, other) -> bool:
+        return self.drugbox_id == other.drugbox_id and self.ingestion_type == other.ingestion_type and self.volume == other.volume and self.num_drug == other.num_drug and self.drug == other.drug
