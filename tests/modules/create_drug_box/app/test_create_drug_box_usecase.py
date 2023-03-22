@@ -16,7 +16,7 @@ class Test_CreateDrugBoxUsecase:
         
         length_before = len(repo.drugboxes)
         
-        drugbox_response = usecase(drug_box=drugbox)
+        drugbox_response = usecase(drug_box=drugbox) 
         
         length_after = len(repo.drugboxes)
         
