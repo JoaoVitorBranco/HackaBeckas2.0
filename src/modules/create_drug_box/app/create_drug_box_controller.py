@@ -37,8 +37,8 @@ class CreateDrugBoxController:
                 raise EntityError("ingestion_type")
             ingestion_type = INGESTION_TYPE[request.data.get("ingestion_type")]
         
-            drug = Drug(name=request.data.get("name"), description=request.data.get("description"), price=request.data.get("price"))
-            drugbox = DrugBox(drug=drug, drugbox_id=request.data.get("drugbox_id"), ingestion_type=ingestion_type, volume=request.data.get("volume"), num_drug=request.data.get("num_drug"))
+            drug = Drug(name=request.data.get("name"), description=request.data.get("description"), price=float(request.data.get("price")))
+            drugbox = DrugBox(drug=drug, drugbox_id=int(request.data.get("drugbox_id")), ingestion_type=ingestion_type, volume=float(request.data.get("volume")), num_drug=int(request.data.get("num_drug")))
             
             drugbox_response = self.createDrugBoxUsecase(drugbox)
             viewmodel = CreateDrugBoxViewmodel(drugbox_response)
